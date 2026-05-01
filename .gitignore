@@ -1,0 +1,112 @@
+# ============ Maven ============
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.m2/
+*.jar
+*.war
+*.ear
+*.rar
+
+# ============ IDE - IntelliJ ============
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+*.class
+
+# ============ IDE - VS Code ============
+.vscode/
+*.code-workspace
+.dist/
+task.txt
+
+
+
+# ============ IDE - Eclipse ============
+.classpath
+.project
+.settings/
+*.launch
+
+# ============ Build & Compilation ============
+.gradle/
+build/
+dist/
+*.class
+*.o
+*.so
+*.dylib
+
+# ============ Java ============
+*.jar
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+*.jar.asc
+.jdtunit/
+
+# ============ OS - macOS ============
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ============ OS - Windows ============
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============ OS - Linux ============
+.directory
+
+# ============ Environment & Config ============
+.env
+.env.local
+.env.*.local
+application-local.properties
+application-dev.properties
+*.properties.local
+
+# ============ Version Control ============
+*.orig
+*.rej
+
+# ============ Logs ============
+*.log
+*.log.*
+logs/
+
+# ============ Docker ============
+docker-compose.override.yml
+
+# ============ Node (if any frontend) ============
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ============ Misc ============
+*.swp
+*.swo
+*~
+.#*
+.DS_Store
+*.bak
+.venv/
+venv/
+target/

@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1a1a1a;
+    --accent: #d63031;
+    --light: #f5f5f5;
+    --gray: #7f8c8d;
+    --border: #e8e8e8;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background: var(--white);
+    color: var(--primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+    background: var(--white);
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+/* ============ HERO ============ */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('/images/hero.webp') center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+}
+
+.hero-title {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-btn {
+    padding: 16px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    background: var(--accent);
+    color: var(--white);
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-btn:hover {
+    background: transparent;
+    color: var(--accent);
+}
+
+/* ============ OFFERINGS ============ */
+.offerings {
+    padding: 80px 40px;
+    background: var(--white);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    color: var(--primary);
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.offering-card {
+    border: 1px solid var(--border);
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.offering-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.offering-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.offering-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.offering-card p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+/* ============ GALLERY ============ */
+.gallery {
+    padding: 80px 40px;
+    background: var(--light);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    filter: brightness(0.9);
+}
+
+.roses {
+    background: url('/images/roses.avif') center/cover;
+    background-color: #c0392b;
+}
+
+.tulips {
+    background: url('/images/tulips.jpg') center/cover;
+    background-color: #e67e22;
+}
+
+.sunflowers {
+    background: url('/images/sunflowers.jpg') center/cover;
+    background-color: #f39c12;
+}
+
+.lilies {
+    background: url('/images/lilies.webp') center/cover;
+    background-color: #ecf0f1;
+}
+
+.orchids {
+    background: url('/images/orchids.jpg') center/cover;
+    background-color: #9b59b6;
+}
+
+.carnations {
+    background: url('/images/carnations.webp') center/cover;
+    background-color: #e84393;
+}
+
+.gallery-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 20px;
+    color: var(--primary);
+}
+
+.gallery-item p {
+    padding: 0 20px 20px;
+    font-size: 13px;
+    color: var(--gray);
+}
+
+/* ============ BOOKING ============ */
+.booking {
+    padding: 100px 40px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    text-align: center;
+}
+
+.booking-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-title {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.booking-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.cta-btn-large {
+    padding: 18px 50px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: var(--accent);
+    color: var(--white);
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.cta-btn-large:hover {
+    background: transparent;
+    color: var(--accent);
+}
+
+.booking-note {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.5px;
+}
+
+/* ============ CONTACT ============ */
+.contact {
+    padding: 80px 40px;
+    background: var(--white);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid var(--border);
+}
+
+.contact-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.9;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .offerings,
+    .gallery,
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .offerings-grid,
+    .gallery-grid,
+    .contact-grid {
+        gap: 20px;
+    }
+
+    .booking {
+        padding: 60px 20px;
+    }
+
+    .booking-title {
+        font-size: 32px;
+    }
+
+    .booking-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .cta-btn,
+    .cta-btn-large {
+        padding: 14px 30px;
+        font-size: 12px;
+    }
+}
+

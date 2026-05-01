@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLORIST - Fresh Flowers Delivered</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">◆ FLORIST</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#gallery" class="nav-link">GALLERY</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">FRESH FLOWERS DELIVERED</h1>
+            <p class="hero-subtitle">Beautiful arrangements for every moment of your life</p>
+            <button class="cta-btn" onclick="scrollToBook()">BOOK NOW</button>
+        </div>
+    </section>
+
+    <!-- Services/Offerings -->
+    <section class="offerings">
+        <h2 class="section-title">WHY CHOOSE US</h2>
+        <div class="offerings-grid">
+            <div class="offering-card">
+                <div class="offering-number">01</div>
+                <h3>FRESH DAILY</h3>
+                <p>Hand-picked flowers sourced daily from premium growers</p>
+            </div>
+            <div class="offering-card">
+                <div class="offering-number">02</div>
+                <h3>SAME DAY DELIVERY</h3>
+                <p>Order by 2 PM for same-day delivery in your area</p>
+            </div>
+            <div class="offering-card">
+                <div class="offering-number">03</div>
+                <h3>CUSTOM ARRANGEMENTS</h3>
+                <p>Our expert florists create perfect bouquets for you</p>
+            </div>
+            <div class="offering-card">
+                <div class="offering-number">04</div>
+                <h3>100% SATISFACTION</h3>
+                <p>Guaranteed quality or your money back, no questions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">OUR COLLECTIONS</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-image roses"></div>
+                <h3>Red Roses</h3>
+                <p>Premium dozen roses</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image tulips"></div>
+                <h3>Tulip Mix</h3>
+                <p>Colorful spring bouquet</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image sunflowers"></div>
+                <h3>Sunflowers</h3>
+                <p>Golden sunshine arrangement</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image lilies"></div>
+                <h3>White Lilies</h3>
+                <p>Elegant lily collection</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image orchids"></div>
+                <h3>Orchids</h3>
+                <p>Exotic orchid display</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image carnations"></div>
+                <h3>Carnations</h3>
+                <p>Vibrant mixed carnations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="booking">
+        <div class="booking-container">
+            <h2 class="booking-title">READY TO ORDER?</h2>
+            <p class="booking-subtitle">Book your fresh flowers now and get a special gift with your order</p>
+            <button class="cta-btn-large">BOOK NOW</button>
+            <p class="booking-note">Or call us at +1 (555) 123-4567</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">GET IN TOUCH</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>ADDRESS</h3>
+                <p>123 Flower Street<br>Garden City, GC 12345</p>
+            </div>
+            <div class="contact-item">
+                <h3>PHONE</h3>
+                <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+            </div>
+            <div class="contact-item">
+                <h3>HOURS</h3>
+                <p>Monday - Friday: 9 AM - 6 PM<br>Saturday - Sunday: 10 AM - 5 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 FLORIST. All rights reserved. | Grown with passion, delivered with love.</p>
+    </footer>
+
+</div>
+
+<script>
+    function scrollToBook() {
+        document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
